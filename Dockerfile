@@ -35,10 +35,11 @@ RUN export FLUTTER_HOME=/usr/lib/flutter \
     && export PATH=$FLUTTER_HOME/bin:$PATH
     
 # Downloading gradle
-RUN wget https://gradle.org/next-steps/?version=6.2.2&format=bin \
+RUN wget https://services.gradle.org/distributions/gradle-6.2.2-bin.zip \
     && unzip gradle-6.2.2-bin.zip \
     && mkdir gradle && mv gradle-6.2.2/ gradle/  \
     && mv gradle/ opt/
+    && rm gradle-6.2.2-bin.zip
 
 # Setting Gradle Environment
 RUN export GRADLE_HOME=/opt/gradle/gradle-6.2.2   \
