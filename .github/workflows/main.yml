@@ -1,6 +1,6 @@
 name: build apk
 on:
- release:
+ push:
     types: [published]
 jobs:
   build:
