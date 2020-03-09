@@ -1,0 +1,11 @@
+name: "flutter-apk-action"
+description: "Get apk file of flutter application without running on your system"
+author: "https://github.com/anandnet"
+
+runs:
+  using: "docker"
+  image: "Dockerfile"
+
+branding:
+  icon: "upload"
+  color: "purple"
