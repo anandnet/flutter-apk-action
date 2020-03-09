@@ -31,7 +31,7 @@ RUN export ANDROID_SDK_ROOT=/usr/lib/Android && \
 RUN git clone https://github.com/flutter/flutter.git -b stable \
     && mv flutter/ /usr/lib 
     
-RUN export FLUTTER_HOME=/usr/lib/flutter
+RUN export FLUTTER_HOME=/usr/lib/flutter \
     && export PATH=$FLUTTER_HOME/bin:$PATH
     
 # Downloading gradle
