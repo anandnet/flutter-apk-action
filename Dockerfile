@@ -45,16 +45,17 @@ RUN wget https://services.gradle.org/distributions/gradle-6.2.2-bin.zip \
 RUN export GRADLE_HOME=/opt/gradle/gradle-6.2.2   \
     && export PATH=$GRADLE_HOME/bin:$PATH
 
-RUN export PATH="/path/to/dir:$PATH" \
-    && . ~/.profile 
+RUN . ~/.profile 
 
 # Setting Android-Environment
-RUN sdkmanager "system-images;android-29;google_apis;x86_64" \
-    && sdkmanager "platforms;android-29"    \
-    && sdkmanager "platform-tools"  \
-    && sdkmanager "patcher;v4"  \
-    && sdkmanager "emulator"    \
-    && sdkmanager "build-tools;29.0.2"
+#RUN sdkmanager "system-images;android-29;google_apis;x86_64" \
+ #   && sdkmanager "platforms;android-29"    \
+ #   && sdkmanager "platform-tools"  \
+  #  && sdkmanager "patcher;v4"  \
+   # && sdkmanager "emulator"    \
+    #&& sdkmanager "build-tools;29.0.2"
 
+
+RUN flutter config --android-sdk /usr/lib/Android
 
 
