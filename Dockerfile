@@ -46,7 +46,6 @@ RUN export GRADLE_HOME=/opt/gradle/gradle-6.2.2   \
     && export PATH=$GRADLE_HOME/bin:$PATH
 
 RUN export PATH="/path/to/dir:$PATH" \
-    && . ~/.bashrc \
     && . ~/.profile 
 
 # Setting Android-Environment
