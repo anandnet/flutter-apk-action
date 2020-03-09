@@ -1,7 +1,5 @@
 name: build apk
-on:
- push:
-    types: [published]
+on: [push]
 
 jobs:
   hello_world_job:
