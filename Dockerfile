@@ -1,1 +1,1 @@
-run --rm -it -v ${PWD}:/build --workdir /build cirrusci/flutter:stable flutter test
+from mcr.microsoft.com/windows/servercore:ltsc2019
