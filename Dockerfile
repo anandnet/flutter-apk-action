@@ -33,6 +33,7 @@ RUN git clone https://github.com/flutter/flutter.git -b stable \
     
 RUN export FLUTTER_HOME=/usr/lib/flutter \
     && export PATH=$FLUTTER_HOME/bin:$PATH
+RUN cd usr/lib/ && ls
     
 # Downloading gradle
 RUN wget https://services.gradle.org/distributions/gradle-6.2.2-bin.zip \
