@@ -5,4 +5,7 @@ RUN apt install -y \
     unzip
 RUN wget https://dl.google.com/android/repository/sdk-tools-linux-3859397.zip \
 && unzip sdk-tools-linux-3859397.zip && rm sdk-tools-linux-3859397.zip
+RUN mkdir Android
+RUN mv tools/ Android/
+RUN mv Android/ /usr/lib
 run ls
