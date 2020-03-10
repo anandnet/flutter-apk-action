@@ -1,6 +1,6 @@
 FROM ubuntu:18.04
 
-WORKDIR /home
+WORKDIR /home/runner/
 RUN pwd
 RUN ls
 # Update and Upgrade ubuntu
