@@ -65,10 +65,10 @@ RUN yes y | sdkmanager "system-images;android-29;google_apis;x86_64" \
 
 #RUN flutter doctor --android-licenses
 RUN flutter config --android-sdk /usr/lib/Android
- RUN flutter create app
+RUN flutter create app
 #WORKDIR /app
 #RUN pwd
 RUN cd app && flutter build apk
-RUN cd build/app/outputs/apk/release/
-RUN realpath app-release.apk
+RUN cd build/
+#RUN realpath app-release.apk
 
