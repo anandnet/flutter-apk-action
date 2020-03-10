@@ -4,7 +4,7 @@ FROM ubuntu:18.04
 #RUN pwd
 #RUN ls
 #Update and Upgrade ubuntu
-#RUN apt update -y && apt upgrade -y
+RUN apt update -y && apt upgrade -y
 
 #Install Required Packages
 RUN apt install -y \
