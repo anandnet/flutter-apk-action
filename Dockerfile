@@ -52,6 +52,8 @@ ENV PATH=$GRADLE_HOME/bin:$PATH
 
 RUN . ~/.profile 
 
+RUN touch ~/.android/repositories.cfg
+
 # Setting Android-Environment
 RUN yes y | sdkmanager "system-images;android-29;google_apis;x86_64" \
    && sdkmanager "platforms;android-29"  \
@@ -60,9 +62,9 @@ RUN yes y | sdkmanager "system-images;android-29;google_apis;x86_64" \
   # && sdkmanager "emulator"    \
    && sdkmanager "build-tools;29.0.2" 
    
-#RUN sdkmanager --licenses -y
 
 
 RUN flutter config --android-sdk /usr/lib/Android
+RUN flutter doctor
 
 
