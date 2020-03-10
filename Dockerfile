@@ -64,6 +64,7 @@ RUN yes y | sdkmanager "system-images;android-29;google_apis;x86_64" \
 
 RUN flutter doctor --android-licenses
 RUN flutter config --android-sdk /usr/lib/Android
- RUN flutter doctor
+ RUN flutter create app
+RUN cd app && flutter build apk
 
 
