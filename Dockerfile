@@ -22,21 +22,21 @@ RUN mv tools/ Android/
 RUN mv Android/ /usr/lib
 
 #android home
-ENV  ANDROID_HOME=/usr/lib/Android && \
-     PATH=$ANDROID_HOME/tools:$PATH   && \
-     PATH=$ANDROID_HOME/tools/bin:$PATH && \
-     PATH=$ANDROID_HOME/platform-tools:$PATH
+ENV  ANDROID_HOME=/usr/lib/Android 
+ENV  PATH=$ANDROID_HOME/tools:$PATH  
+ENV  PATH=$ANDROID_HOME/tools/bin:$PATH 
+ENV  PATH=$ANDROID_HOME/platform-tools:$PATH
     
 #android sdk root
-ENV ANDROID_SDK_ROOT=/usr/lib/Android && \
-     PATH=$ANDROID_SDK_ROOT:$PATH
+ENV ANDROID_SDK_ROOT=/usr/lib/Android 
+ENV PATH=$ANDROID_SDK_ROOT:$PATH
     
 # Cloning flutter and setting environment
 RUN git clone https://github.com/flutter/flutter.git -b stable \
     && mv flutter/ /usr/lib 
     
-ENV FLUTTER_HOME=/usr/lib/flutter \
-    && PATH=$FLUTTER_HOME/bin:$PATH
+ENV FLUTTER_HOME=/usr/lib/flutter 
+ENV PATH=$FLUTTER_HOME/bin:$PATH
 RUN cd usr/lib/ && ls
     
 # Downloading gradle
@@ -47,8 +47,8 @@ RUN wget https://services.gradle.org/distributions/gradle-6.2.2-bin.zip \
     && rm gradle-6.2.2-bin.zip
 
 # Setting Gradle Environment
-ENV GRADLE_HOME=/opt/gradle/gradle-6.2.2   \
-    && PATH=$GRADLE_HOME/bin:$PATH
+ENV GRADLE_HOME=/opt/gradle/gradle-6.2.2   
+ENV PATH=$GRADLE_HOME/bin:$PATH
 
 RUN . ~/.profile 
 
