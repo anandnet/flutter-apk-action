@@ -12,7 +12,6 @@ RUN apt install -y \
     zip \
     bash \
     curl \
-    which \
     xz-utils
     
 # Downloading and setting up Android-sdk-tools
