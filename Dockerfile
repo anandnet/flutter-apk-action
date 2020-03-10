@@ -54,13 +54,13 @@ RUN . ~/.profile
 
 # Setting Android-Environment
 RUN sdkmanager "system-images;android-29;google_apis;x86_64" \
-   && sdkmanager "platforms;android-29"  \
-   && sdkmanager "platform-tools"  \
-   && sdkmanager "patcher;v4"  \
-   && sdkmanager "emulator"    \
-   && sdkmanager "build-tools;29.0.2" 
+   &&  "platforms;android-29"  \
+   &&  "platform-tools"  \
+   &&  "patcher;v4"  \
+   &&  "emulator"    \
+   &&  "build-tools;29.0.2" 
    
-RUN sdkmanager --licenses -y
+#RUN sdkmanager --licenses -y
 
 
 RUN flutter config --android-sdk /usr/lib/Android
