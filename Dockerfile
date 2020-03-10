@@ -69,7 +69,7 @@ RUN flutter config --android-sdk /usr/lib/Android
 #WORKDIR /app
 #RUN pwd
 RUN flutter create app && cd app && flutter build apk
-WORKDIR app
+#WORKDIR app
 RUN pwd && ls
 #RUN cd  app/build/app/outputs/apk/release/  &&  realpath app-release.apk
 #RUN realpath app-release.apk
