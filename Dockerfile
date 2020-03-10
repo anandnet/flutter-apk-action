@@ -1,7 +1,7 @@
 FROM ubuntu:18.04
 
 # Update and Upgrade ubuntu
-RUN apt update && apt upgrade
+RUN apt update -y && apt upgrade -y
 
 #Install Required Packages
 RUN apt install -y \
