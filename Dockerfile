@@ -1,5 +1,6 @@
 FROM ubuntu:18.04
 
+WORKDIR .
 # Update and Upgrade ubuntu
 RUN apt update -y && apt upgrade -y
 
