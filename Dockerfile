@@ -8,7 +8,12 @@ RUN apt install -y \
     wget \
     unzip \
     openjdk-8-jdk \
-    git
+    git  \
+    zip \
+    bash \
+    curl \
+    which \
+    xz-utils
     
 # Downloading and setting up Android-sdk-tools
 RUN wget https://dl.google.com/android/repository/sdk-tools-linux-3859397.zip \
