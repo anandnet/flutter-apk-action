@@ -66,7 +66,7 @@ RUN yes y | sdkmanager "system-images;android-29;google_apis;x86_64" \
 #  # && sdkmanager "emulator"    \
    && sdkmanager "build-tools;29.0.2" 
 
-RUN flutter doctor --android-licenses
+#RUN flutter doctor --android-licenses
 
 RUN flutter config --android-sdk /usr/lib/Android
 WORKDIR '/home/runner/work/flutter-apk-action/flutter-apk-action'
