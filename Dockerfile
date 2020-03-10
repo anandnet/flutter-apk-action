@@ -81,5 +81,6 @@ RUN flutter create app && cd app && flutter build apk
 #WORKDIR app
 #RUN pwd && ls
 RUN cd  app/build/app/outputs/apk/release/  &&  realpath app-release.apk
+RUN mv /app /home/runner/work/flutter-apk-action/flutter-apk-action/
 #RUN realpath app-release.apk
 
