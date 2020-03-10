@@ -69,6 +69,6 @@ RUN flutter create app
 #WORKDIR /app
 #RUN pwd
 RUN cd app && flutter build apk
-RUN cd build/
+RUN ls
 #RUN realpath app-release.apk
 
