@@ -54,11 +54,11 @@ RUN . ~/.profile
 
 # Setting Android-Environment
 RUN yes y | sdkmanager "system-images;android-29;google_apis;x86_64" \
-   &&  "platforms;android-29"  \
-   &&  "platform-tools"  \
-   &&  "patcher;v4"  \
-   &&  "emulator"    \
-   &&  "build-tools;29.0.2" 
+   && sdkmanager "platforms;android-29"  \
+   && sdkmanager "platform-tools"  \
+   && sdkmanager "patcher;v4"  \
+  # && sdkmanager "emulator"    \
+   && sdkmanager "build-tools;29.0.2" 
    
 #RUN sdkmanager --licenses -y
 
