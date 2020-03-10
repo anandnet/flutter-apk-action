@@ -1,8 +1,10 @@
 FROM ubuntu:18.04
 
 #WORKDIR '/home/runner/work/flutter-apk-action/flutter-apk-action'
-#RUN pwd
-#RUN ls
+COPY example/ .
+RUN pwd
+RUN ls
+
 #Update and Upgrade ubuntu
 RUN apt update -y && apt upgrade -y
 
