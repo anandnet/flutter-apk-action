@@ -36,8 +36,8 @@ ENV ANDROID_SDK_ROOT=/usr/lib/Android
 ENV PATH=$ANDROID_SDK_ROOT:$PATH
     
 # Cloning flutter and setting environment
-#RUN git clone https://github.com/flutter/flutter.git -b stable \
-#    && mv flutter/ /usr/lib 
+RUN git clone https://github.com/flutter/flutter.git -b stable \
+    && mv flutter/ /usr/lib 
     
 ENV FLUTTER_HOME=/usr/lib/flutter 
 ENV PATH=$FLUTTER_HOME/bin:$PATH
@@ -56,7 +56,7 @@ ENV PATH=$GRADLE_HOME/bin:$PATH
 
 #RUN . ~/.profile 
 
-#RUN mkdir -p /root/.android && touch /root/.android/repositories.cfg
+RUN mkdir -p /root/.android && touch /root/.android/repositories.cfg
 
 # Setting Android-Environment
 RUN yes y | sdkmanager "system-images;android-29;google_apis;x86_64" \
