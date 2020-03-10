@@ -52,7 +52,7 @@ ENV PATH=$GRADLE_HOME/bin:$PATH
 
 RUN . ~/.profile 
 
-RUN touch ~/.android/repositories.cfg
+RUN mkdir -p /root/.android && touch /root/.android/repositories.cfg
 
 # Setting Android-Environment
 RUN yes y | sdkmanager "system-images;android-29;google_apis;x86_64" \
