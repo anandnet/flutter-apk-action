@@ -53,7 +53,7 @@ ENV PATH=$GRADLE_HOME/bin:$PATH
 RUN . ~/.profile 
 
 # Setting Android-Environment
-RUN sdkmanager "system-images;android-29;google_apis;x86_64" \
+RUN sdkmanager -y "system-images;android-29;google_apis;x86_64" \
    &&  "platforms;android-29"  \
    &&  "platform-tools"  \
    &&  "patcher;v4"  \
