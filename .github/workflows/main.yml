@@ -10,7 +10,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Setting env and building app
-        uses: .
+        uses: /
       - name: Upload apk
         uses: actions/upload-artifact@v1
         with:
