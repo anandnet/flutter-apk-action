@@ -53,12 +53,12 @@ ENV PATH=$GRADLE_HOME/bin:$PATH
 RUN . ~/.profile 
 
 # Setting Android-Environment
-RUN sdkmanager "system-images;android-29;google_apis;x86_64" \
-   && sdkmanager "platforms;android-29"    \
-   && sdkmanager "platform-tools"  \
-   && sdkmanager "patcher;v4"  \
-   && sdkmanager "emulator"    \
-   && sdkmanager "build-tools;29.0.2"
+RUN sdkmanager "system-images;android-29;google_apis;x86_64" -y\
+   && sdkmanager "platforms;android-29" -y \
+   && sdkmanager "platform-tools" -y \
+   && sdkmanager "patcher;v4" -y \
+   && sdkmanager "emulator"   -y \
+   && sdkmanager "build-tools;29.0.2" -y
 
 
 RUN flutter config --android-sdk /usr/lib/Android
