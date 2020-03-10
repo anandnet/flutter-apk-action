@@ -13,6 +13,7 @@ RUN apt install -y \
     bash \
     curl \
     xz-utils
+RUN cd /usr/lib/ && ls
     
 # Downloading and setting up Android-sdk-tools
 RUN wget https://dl.google.com/android/repository/sdk-tools-linux-3859397.zip \
@@ -68,5 +69,4 @@ RUN flutter config --android-sdk /usr/lib/Android
 WORKDIR /app
 RUN pwd
 RUN flutter build apk
-
 
