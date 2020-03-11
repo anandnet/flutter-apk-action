@@ -69,7 +69,7 @@ RUN yes y | sdkmanager "system-images;android-29;google_apis;x86_64" \
 RUN flutter config --android-sdk /usr/lib/Android
 #WORKDIR '/home/runner/work/flutter-apk-action/flutter-apk-action'
 RUN  flutter create app && cd app && flutter build apk
-WORKDIR /app
+RUN cp  ./app/build/app/outputs/apk/release/app-release.apk ./app.apk
 #RUN pwd
 
 #RUN flutter create app && cd app && flutter build apk
