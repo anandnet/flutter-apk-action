@@ -1,10 +1,6 @@
 FROM ubuntu:18.04
 
 #WORKDIR '/home/runner/work/flutter-apk-action/flutter-apk-action'
-COPY example/ .
-RUN pwd
-RUN ls
-
 #Update and Upgrade ubuntu
 RUN apt update -y && apt upgrade -y
 
@@ -76,12 +72,12 @@ RUN flutter config --android-sdk /usr/lib/Android
 #WORKDIR /app
 #RUN pwd
 
-RUN flutter create app && cd app && flutter build apk
+#RUN flutter create app && cd app && flutter build apk
 
 #WORKDIR app
 #RUN pwd && ls
-RUN cd  app/build/app/outputs/apk/release/  &&  realpath app-release.apk
-RUN mv /app /home/runner/work/flutter-apk-action/flutter-apk-action/
-RUN ls /home/runner/work/flutter-apk-action/flutter-apk-action/
+#RUN cd  app/build/app/outputs/apk/release/  &&  realpath app-release.apk
+#RUN mv /app /home/runner/work/flutter-apk-action/flutter-apk-action/
+#RUN ls /home/runner/work/flutter-apk-action/flutter-apk-action/
 #RUN realpath app-release.apk
 
