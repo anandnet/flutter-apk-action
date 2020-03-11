@@ -12,7 +12,7 @@ jobs:
       - name: Setting env and building app
         uses: ./
       - name: Upload apk
-        uses: actions/download-artifact@v1
+        uses: actions/upload-artifact@v1
         with:
           name: apk released
           path: 'app.apk'
