@@ -4,8 +4,8 @@ FROM ubuntu:18.04
 #WORKDIR '/home/runner/work/flutter-apk-action/flutter-apk-action'
 #Update and Upgrade ubuntu
 RUN apt update -y && apt upgrade -y
-
-RUN cd ~ && ls && touch app.apk && ls
+RUN touch app.apk
+RUN cp ./app.apk ~/app.apk && ls && cd ~ && ls
 RUN .k
 
 #Install Required Packages
