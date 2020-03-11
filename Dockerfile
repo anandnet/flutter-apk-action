@@ -1,7 +1,7 @@
 FROM ubuntu:18.04
 
 
-#WORKDIR '/home/runner/work/flutter-apk-action/flutter-apk-action'
+##WORKDIR '/home/runner/work/flutter-apk-action/flutter-apk-action'
 #Update and Upgrade ubuntu
 RUN apt update -y && apt upgrade -y
 
