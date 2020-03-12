@@ -10,7 +10,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: check vol
-        run: cd ../ && ls
+        run: cd .../ && ls
       #- name: Setting env and building app
       #  uses: ./
       - name: Double check vol
