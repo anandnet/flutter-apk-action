@@ -19,10 +19,10 @@ RUN apt install -y \
 #RUN cd /usr/lib/ && ls
     
 # Downloading and setting up Android-sdk-tools
-#RUN wget https://dl.google.com/android/repository/sdk-tools-linux-3859397.zip \
-#&& unzip sdk-tools-linux-3859397.zip && rm sdk-tools-linux-3859397.zip
+RUN wget https://dl.google.com/android/repository/sdk-tools-linux-3859397.zip \
+&& unzip sdk-tools-linux-3859397.zip && rm sdk-tools-linux-3859397.zip
 RUN mkdir Android
-#RUN mv tools/ Android/
+RUN mv tools/ Android/
 RUN mv Android/ /usr/lib
 
 #android home
