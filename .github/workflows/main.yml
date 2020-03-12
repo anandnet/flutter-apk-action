@@ -14,7 +14,7 @@ jobs:
       - name: check vol
         run: cd /home/runner/work/flutter-apk-action/flutter-apk-action && ls
       - name: Setting env and building app
-        uses: /home/runner/work/flutter-apk-action/flutter-apk-action/Dockerfile
+        uses: /home/runner/work/flutter-apk-action/flutter-apk-action/
       - name: Upload apk
         uses: actions/upload-artifact@v1
         with:
