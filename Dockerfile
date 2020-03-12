@@ -19,10 +19,10 @@ RUN apt install -y \
 #RUN cd /usr/lib/ && ls
     
 # Downloading and setting up Android-sdk-tools
-RUN wget https://dl.google.com/android/repository/sdk-tools-linux-3859397.zip \
-&& unzip sdk-tools-linux-3859397.zip && rm sdk-tools-linux-3859397.zip
+#RUN wget https://dl.google.com/android/repository/sdk-tools-linux-3859397.zip \
+#&& unzip sdk-tools-linux-3859397.zip && rm sdk-tools-linux-3859397.zip
 RUN mkdir Android
-RUN mv tools/ Android/
+#RUN mv tools/ Android/
 RUN mv Android/ /usr/lib
 
 #android home
@@ -44,27 +44,27 @@ ENV PATH=$FLUTTER_HOME/bin:$PATH
 #RUN cd usr/lib/ && ls
     
 # Downloading gradle
-RUN wget https://services.gradle.org/distributions/gradle-6.2.2-bin.zip \
-    && unzip gradle-6.2.2-bin.zip \
-    && mkdir gradle && mv gradle-6.2.2/ gradle/  \
-    && mv gradle/ /opt/  \
-    && rm gradle-6.2.2-bin.zip
+#RUN wget https://services.gradle.org/distributions/gradle-6.2.2-bin.zip \
+#    && unzip gradle-6.2.2-bin.zip \
+#    && mkdir gradle && mv gradle-6.2.2/ gradle/  \
+#    && mv gradle/ /opt/  \
+#    && rm gradle-6.2.2-bin.zip
 
 # Setting Gradle Environment
-ENV GRADLE_HOME=/opt/gradle/gradle-6.2.2   
-ENV PATH=$GRADLE_HOME/bin:$PATH
+#ENV GRADLE_HOME=/opt/gradle/gradle-6.2.2   
+#ENV PATH=$GRADLE_HOME/bin:$PATH
 
 #RUN . ~/.profile 
 
 RUN mkdir -p /root/.android && touch /root/.android/repositories.cfg
 
 # Setting Android-Environment
-RUN yes y | sdkmanager "system-images;android-29;google_apis;x86_64" \
-   && sdkmanager "platforms;android-29"  \
-   && sdkmanager "platform-tools"  \
-   && sdkmanager "patcher;v4"  \
+#RUN yes y | sdkmanager "system-images;android-29;google_apis;x86_64" \
+#   && sdkmanager "platforms;android-29"  \
+#   && sdkmanager "platform-tools"  \
+#   && sdkmanager "patcher;v4"  \
 #  # && sdkmanager "emulator"    \
-   && sdkmanager "build-tools;29.0.2" 
+#   && sdkmanager "build-tools;29.0.2" 
 
 #RUN flutter doctor --android-licenses
 
