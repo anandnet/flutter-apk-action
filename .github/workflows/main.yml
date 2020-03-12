@@ -9,6 +9,8 @@ jobs:
       # To use this repository's private action, you must check out the repository
       - name: Checkout
         uses: actions/checkout@v2
+      - name: check vol
+        run: ls -la /github/home
       - name: Setting env and building app
         uses: ./
       - name: Upload apk
