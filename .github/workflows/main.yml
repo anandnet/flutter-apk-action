@@ -12,9 +12,9 @@ jobs:
       #- name: check vol 4
       #  run: cd /home/runner/work/ && ls
       - name: check vol
-        run: cd /home/runner/work/flutter-apk-action/flutter-apk-action && ls
+        run: WORKDIR ./
       - name: Setting env and building app
-        uses: /home/runner/work/flutter-apk-action/flutter-apk-action/
+        uses: .
       - name: Upload apk
         uses: actions/upload-artifact@v1
         with:
