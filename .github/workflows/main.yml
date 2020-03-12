@@ -10,7 +10,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: check vol
-        run: ls -la /github/home
+        run: ls -la ./
       - name: Setting env and building app
         uses: ./
       - name: Upload apk
