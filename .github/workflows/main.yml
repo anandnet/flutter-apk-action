@@ -13,8 +13,8 @@ jobs:
         run: cd /home/runner/work/ && ls
       - name: check vol
         run: cd /home/runner/work/flutter-apk-action && ls
-      - name: Setting env and building app
-        uses: /Dockerfile
+      #- name: Setting env and building app
+       # uses: /Dockerfile
       - name: Double check vol
         run: cd ./ && ls
       - name: Upload apk
