@@ -44,17 +44,16 @@ ENV PATH=$FLUTTER_HOME/bin:$PATH
 #RUN cd usr/lib/ && ls
     
 # Downloading gradle
-#RUN wget https://services.gradle.org/distributions/gradle-6.2.2-bin.zip \
-#    && unzip gradle-6.2.2-bin.zip \
-#    && mkdir gradle && mv gradle-6.2.2/ gradle/  \
-#    && mv gradle/ /opt/  \
-#    && rm gradle-6.2.2-bin.zip
+RUN wget https://services.gradle.org/distributions/gradle-6.2.2-bin.zip \
+    && unzip gradle-6.2.2-bin.zip \
+    && mkdir gradle && mv gradle-6.2.2/ gradle/  \
+    && mv gradle/ /opt/  \
+    && rm gradle-6.2.2-bin.zip
 
 # Setting Gradle Environment
-#ENV GRADLE_HOME=/opt/gradle/gradle-6.2.2   
-#ENV PATH=$GRADLE_HOME/bin:$PATH
+ENV GRADLE_HOME=/opt/gradle/gradle-6.2.2   
+ENV PATH=$GRADLE_HOME/bin:$PATH
 
-#RUN . ~/.profile 
 
 RUN mkdir -p /root/.android && touch /root/.android/repositories.cfg
 
@@ -63,7 +62,6 @@ RUN mkdir -p /root/.android && touch /root/.android/repositories.cfg
 #   && sdkmanager "platforms;android-29"  \
 #   && sdkmanager "platform-tools"  \
 #   && sdkmanager "patcher;v4"  \
-#  # && sdkmanager "emulator"    \
 #   && sdkmanager "build-tools;29.0.2" 
 
 #RUN flutter doctor --android-licenses
